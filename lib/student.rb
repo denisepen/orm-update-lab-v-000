@@ -51,9 +51,9 @@ def self.create(name, grade)
 end
 
 def self.new_from_db(row)
-  # new_student = self.new(name, grade)
+   new_student = self.new(name, grade)
 
-  new_student = self.create(name, grade) do |student|
+  # new_student = self.create(name, grade) do |student|
   new_student.id = row[0]
   new_student.name = row[1]
   new_student.grade = row[2]
